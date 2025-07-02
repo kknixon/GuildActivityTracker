@@ -1,27 +1,42 @@
 <template>
     <div id="app">
-        <nav>
-            <router-link to="/">Home</router-link>
-            <router-link to="/about">About</router-link>
-        </nav>
+        <Header />
         <router-view />
     </div>
 </template>
 
 <script>
+import Header from './components/Header.vue';
+
 export default {
     name: 'App',
+    components: {
+        Header,
+    },
 };
 </script>
 
 <style>
-/* Add some basic styling */
-nav {
-    margin-bottom: 20px;
+/* Global styles for your app */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav a {
-    margin: 0 10px;
-    text-decoration: none;
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Optional: If you want to ensure body stretches the full height of the page */
+body {
+    font-family: Arial, sans-serif;
+    /* You can specify your font here */
 }
 </style>
